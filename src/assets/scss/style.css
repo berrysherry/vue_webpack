@@ -1,0 +1,81 @@
+/**
+ * Demo Styles
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%; }
+
+/**
+ * Footer Styles
+ */
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center; }
+
+@media (min-width: 1200px) {
+  .nav-wrap {
+    max-width: 960px;
+    margin: 0 auto; } }
+
+/*top image*/
+#banner {
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../candy.jpg"); }
+
+.weatherbox {
+  padding: 20px 30px;
+  -webkit-box-shadow: 2px 2px 5px #DDD;
+  box-shadow: 2px 2px 5px #DDD;
+  margin: 10px 0; }
+  .weatherbox .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .weatherbox .city {
+    float: left;
+    width: 64%; }
+    .weatherbox .city .cityname {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: smaller; }
+    .weatherbox .city .temp {
+      font-size: 50px; }
+  .weatherbox .icon {
+    width: 30%;
+    float: right;
+    margin-top: 10px; }
+    .weatherbox .icon i {
+      font-size: 70px;
+      color: #CCC; }
+  .weatherbox .details {
+    padding-top: 10px;
+    font-size: smaller;
+    letter-spacing: 1px; }
