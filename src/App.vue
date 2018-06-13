@@ -49,6 +49,7 @@
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
+@import "~vue2-animate/src/sass/vue2-animate.scss";
 </style>
 
 <style>
@@ -57,4 +58,5 @@
 @import "./assets/bootstrap-vue/dist/bootstrap-vue";
 @import "./assets/scss/style";
 @import "./assets/css/base";
+
 </style>

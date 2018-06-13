@@ -1,8 +1,7 @@
 <template>
   <div id="test">
 
-    <todo v-on:todo:addd="addTodo"></todo>
-    <todoitem v-for="todo in todos" v-bind:todo="todo" v-on:todo:remove="removeTodo" :key="todo.id"></todoitem>
+    <todo></todo>
 
 <!--     <h4>Recommendation:</h4>
     <testcontent v-bind:loadmsg="drink" v-for="(drink, index) in itemlist" :key="index"></testcontent>
@@ -48,19 +47,19 @@
         todos: [
 
         ],
-        nextId: 0
+        // nextId: 0
       }
     },
-    methods: {
-      addTodo(text) {
-        this.todos.push({id: this.nextId, text:text});
-        this.nextId++;
-      },
-      removeTodo(id) {
-        let todos = this.todos;
-        this.todos = todos.filter((todo) => todo.id != id);
-      }
-    }
+    // methods: {
+    //   addTodo(text) {
+    //     this.todos.push({id: this.nextId, text:text});
+    //     this.nextId++;
+    //   },
+    //   removeTodo(id) {
+    //     let todos = this.todos;
+    //     this.todos = todos.filter((todo) => todo.id != id);
+    //   }
+    // }
   }
 
 </script>
