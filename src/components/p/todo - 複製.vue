@@ -4,9 +4,17 @@
 
     <transition-group name="fade" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
 
-      <todo-item v-for="(todo,index) in todosFiltered" :key="todo.id" :todo="todo" :index="index" @removedTodo="removeTodo">
-        
-      </todo-item>
+      <div v-for="(todo,index) in todosFiltered" :key="todo.id" class="todo-item">
+        <div class="todo-item-left">
+          <input type="checkbox" v-model="todo.completed"">
+            <div v-if="!todo.editing" @dblclick="editTodo(todo)" class="todo-item-label" :class="{ completed : todo.completed }">{{ todo.title }} completed: {{todo.completed}}
+            </div> <!-- if todo.completed = true, 加入completed class-->
+            <input v-else class="todo-item-edit" type="text" v-model="todo.title" @blur="doneEdit(todo)" @keyup.enter="doneEdit(todo)" @keyup.esc="cancelEdit(todo)" v-focus>
+        </div>
+        <div class="remove-item" @click="removeTodo(index)"> 
+          &times;
+        </div>
+      </div>
 
     </transition-group>
 
@@ -25,18 +33,15 @@
         <transition name="fade">
           <button v-if="showClearCompleted" @click="clearCompleted">Clear Completed</button>
         </transition>
+
       </div>
     </div>
 
   </div>
 </template>
 <script>
-import TodoItem from './todoitem'
-export default { 
+export default {
   name: 'todo',
-  components: {
-    TodoItem,
-  },
   data () {
     return {
       newTodo: '',

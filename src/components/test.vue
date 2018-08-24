@@ -24,12 +24,12 @@
   import Fruitcontent from './p/Fruitcontent'
   import Polaroidgallery from './p/Polaroidgallery'
   import Todo from './p/Todo'
-  import Todoitem from './p/Todoitem'
+
 
   export default {
     name: 'test',
     components: {
-      Testcontent, Fruitcontent, Polaroidgallery, Todo,Todoitem
+      Testcontent, Fruitcontent, Polaroidgallery, Todo
     },
       data () {
       return {

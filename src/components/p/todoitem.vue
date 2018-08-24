@@ -1,21 +1,43 @@
 <template>
-	<div class="todoitem">      
-    <button class="btn btn-danger removeTodo" v-on:click="removeTodo">Remove</button> {{todo.text}}
+   
+  <div class="todo-item">
+    <div class="todo-item-left">
+        <input type="checkbox" v-model="completed"">
+          <div v-if="!editing" @dblclick="editTodo" class="todo-item-label" :class="{ completed : completed }">{{ title }} completed: {{completed}}
+          </div>
+          <input v-else class="todo-item-edit" type="text" v-model="title" @blur="doneEdit" @keyup.enter="doneEdit" @keyup.esc="cancelEdit" v-focus>
+      </div>
+      <div class="remove-item" @click="removeTodo(index)"> 
+        &times;
+      </div>
   </div>
+
 </template>
 <script>
 export default {
   name: 'todo-item',
-  props: ['todo'],
+  props: {
+    todo: {
+      type: Object,
+      required: true,
+    },
+    index: {
+      type: Number,
+      required: true,
+    }
+  },
   data () {
     return {
-      text: ""
+      'id': this.todo.id,
+      'title': this.todo.title,
+      'completed': this.todo.completed,
+      'editing': this.todo.editing,
+      'beforeEditCache': '',
     }
   },
   methods: {
-    removeTodo() {
-      this.$emit('todo:remove', this.todo.id);
-      this.text = '';
+    removeTodo(index) {
+      this.$emit('removedTodo', index)
     }
   }
 }

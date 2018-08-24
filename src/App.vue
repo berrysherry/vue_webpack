@@ -20,6 +20,8 @@
       <router-link :to="'table'" class="nav-link">table</router-link>
       <router-link :to="'loadgroupweatherapi'" class="nav-link">group Weather</router-link>
       <router-link :to="'loadnowweatherapi'" class="nav-link">NOW Weather</router-link>
+      <!-- <router-link :to="'main'" class="nav-link">Practice</router-link> -->
+      <router-link :to="'usermain'" class="nav-link">Practice - User</router-link>
     </b-navbar-nav>
 
   </b-collapse>
@@ -31,18 +33,18 @@
     <div id="body" class="container">
       <p slot="header">Header Component End</p><!--這行決定出現位置-->
       <router-view></router-view>     
-    </div><component></component>
+    </div><footercomponent></footercomponent>
   </div>
 
 </template>
 
 <script>
-  import Component from './components/component'
+  import Footercomponent from './components/Footercomponent'
   export default {
   name: 'App',
   components: {
-    Component
-  }
+    Footercomponent,
+  },
 }
 
 </script>

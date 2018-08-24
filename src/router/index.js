@@ -11,6 +11,11 @@ import Loadcafeapi_taichung from '@/components/loadcafeapi_taichung'
 import Table from '@/components/table'
 import 'bootstrap'
 import BootstrapVue from 'bootstrap-vue'
+import Main from '@/components/practice/Main'
+import UserMain from '@/components/practice/user/UserMain'
+import slotpractice from '@/components/slotpractice/slotpractice'
+import slot_color from '@/components/slot_color'
+import myQuote from '@/components/myQuote'
 
 Vue.use(BootstrapVue);
 Vue.use(Router)
@@ -61,6 +66,31 @@ export default new Router({
       path: '/loadgroupweatherapi',
       name: 'loadgroupweatherapi',
       component: Loadgroupweatherapi
+    },
+    {
+      path: '/main',
+      name: 'main',
+      component: Main
+    },
+    {
+      path: '/usermain',
+      name: 'usermain',
+      component: UserMain
+    },
+    {
+      path: '/slotpractice',
+      name: 'slotpractice',
+      component: slotpractice
+    },
+    {
+      path: '/slot_color',
+      name: 'slot_color',
+      component: slot_color
+    },
+    {
+      path: '/myQuote',
+      name: 'myQuote',
+      component: myQuote
     }
   ]
 })

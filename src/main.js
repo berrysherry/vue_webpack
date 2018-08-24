@@ -6,6 +6,16 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+export const eventBus = new Vue();
+
+export const serverBus = new Vue({
+	methods: {
+		changeStatus(status) {
+			this.$emit('statusWasChanged', status)
+		}
+	}
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
