@@ -1,9 +1,19 @@
 <template>
 	<div>
 		<form>
-			<textarea v-model="quote" rows="3"></textarea><br>
-			<input type="text" v-model="author"><br>
-			<button class="btn btn-primary" @click.prevent="addQuote">Add Quote</button>
+			<div class="notepaper"><h4>Post-it! for Quote</h4>
+			    <figure class="quote">
+					<textarea v-model="quote" rows="3" placeholder="Quote Content"></textarea>
+					<div class="row">
+						<div class="col-xs-12 col-md-8">
+							<input type="text" v-model="author" placeholder="Author (optional)">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<button @click.prevent="addQuote">Add Quote</button>
+						</div>
+					</div>
+				</figure>
+			</div>
 		</form>
 	</div>
 </template>

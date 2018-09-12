@@ -1,14 +1,13 @@
 <template>
-	<div class="row">
-		<quote-content v-for="(quote, index) in quotes">{{ quote.content }}<span v-if="quote.author!=''"> by {{ quote.author }}</span> <span @click="deleteQuote(index)">&times;</span></quote-content>
+	<div id="list">
+		<quote-content v-for="(quote, index) in quotes"><!-- {{index}}  --><span @click="propFn(quote)" style="float:right">&times;</span><br><span class="curly-quotes">{{ quote.content }}</span><span v-if="quote.author!=''" class="author">— {{ quote.author }}</span> </quote-content>
 	</div>
 </template>
 
 <script>
 	import MyQuoteContent from './MyQuoteContent';
-	export default {
-		
-		props: ['quotes'],
+	export default {		
+		props: {quotes: Array, propFn: Function},
 		components: {
 			quoteContent: MyQuoteContent,
 		},

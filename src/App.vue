@@ -59,6 +59,6 @@
 @import "./assets/css/fontawesome-all";
 @import "./assets/bootstrap-vue/dist/bootstrap-vue";
 @import "./assets/scss/style";
-@import "./assets/css/base";
+/*@import "./assets/css/base";*/
 
 </style>

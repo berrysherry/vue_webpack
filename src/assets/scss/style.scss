@@ -54,6 +54,12 @@ body {
   background-image: url('../candy.jpg');
 }
 
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-bottom: 200px;
+}
+
 .weatherbox {
 	padding: 20px 30px;
 	box-shadow: 2px 2px 5px #DDD;
@@ -98,10 +104,6 @@ body {
 	
 }
 
-.container {
-	max-width: 600px;
-	margin: 0 auto;
-}
 .todo-input {
 	width: 100%;
 	padding: 10px 18px;
@@ -172,6 +174,7 @@ body {
 button {
 	font-size: 14px;
 	background-color: #FFF;
+	font-family: Open Sans;
 
 	&:hover {
 		background-color: pink;
@@ -192,3 +195,203 @@ button {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+/* Quote App -- START */
+blockquote, figure, figcaption {
+  margin: 0;
+}
+.notepaper {
+  position: relative;
+  margin: 40px auto;
+  padding: 29px 44px 20px 65px;
+  width: 100%;
+  line-height: 30px;
+  color: #6a5f49;
+  text-shadow: 0 1px 1px white;
+  background-color: #f2f6c1;
+  background-image: -moz-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -o-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -webkit-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -webkit-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  border: 1px solid #c3baaa;
+  border-color: rgba(195, 186, 170, 0.9);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+	&:before, &:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	&:before {
+		left: 38px;
+		width: 4px;
+		border: solid #efcfad;
+		border-color: rgba(239, 207, 173, 0.9);
+		border-width: 0 1px;
+	}
+
+	&:after {
+ 		z-index: -1;
+		left: 2px;
+		bottom: -4px;
+		right: 0;
+		background: rgba(242, 246, 193, 0.9);
+		border: 1px solid rgba(170, 157, 134, 0.7);
+		/*   -webkit-transform: rotate(2deg);
+		-moz-transform: rotate(2deg);
+		-ms-transform: rotate(2deg);
+		-o-transform: rotate(2deg);
+		transform: rotate(2deg); */
+	}
+	input[type=text], input[type=password], select, textarea { 
+	    display: block;
+	    padding: 10px 15px;
+	    margin: 10px auto;
+	    background-color: rgba(255, 255, 255, 0.7);
+	    border: none;
+	    width: 100%;
+	    outline: none;
+	    font-size: 14px !important;
+	    font-family: 'Open Sans', sans-serif !important;
+	}
+	button { 
+	    display: block;
+	    padding: 10px;
+	    margin: 10px auto;
+	    background-color: #FE7B5F;
+	    color: #FFF;
+	    border: 1px solid #FE7B5F;
+	    width: 100%;
+	    outline: none;
+	    font-size: 14px !important;
+	    font-family: 'Open Sans', sans-serif !important;
+	    cursor: pointer;
+	    border-radius: 40px;
+	    -webkit-transition:all .2s ease-in-out;
+	    -o-transition:all .2s ease-in-out;
+	    transition:all .2s ease-in-out;
+	    &:hover {
+	    	background-color: #FFF;
+	    	color: #FE7B5F;
+	    	border: 1px solid #FE7B5F;
+	    }
+	}
+}
+
+
+.paper {
+	padding: 8px 15px 27px 55px;
+	position: relative;
+	border: 1px solid #B5B5B5;
+	background: white;
+	background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+	background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+	background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+	-webkit-background-size: 100% 30px;
+	-moz-background-size: 100% 30px;
+	-ms-background-size: 100% 30px;
+	background-size: 100% 30px;
+
+	&:before {
+		content:"";
+		z-index:-1;
+		margin:0 1px;
+		width: 99%;
+		height:10px;
+		position:absolute;
+		bottom:-3px;
+		left:0;
+		background:white;
+		border:1px solid #B5B5B5;
+	}
+
+	&:after {
+		content:'';
+		position:absolute;
+		width:0px;
+		top:0;
+		left:39px;
+		bottom:0;
+		border-left:1px solid #F8D3D3;
+	}
+}
+
+#list {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -1.875em; /* 30px */
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.875em; /* 30px */
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.875em; /* 30px */
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 1.875em; /* 30px */
+    column-fill: auto;
+    @media only screen and ( max-width: 40em ) /* 640px */{
+        -webkit-column-count: 2;
+        -webkit-column-gap: 0.938em; /* 15px */
+        -moz-column-count: 2;
+        -moz-column-gap: 0.938em; /* 15px */
+        column-count: 2;
+        column-gap: 0.938em; /* 15px */
+    }
+    @media only screen and ( max-width: 20em ) /* 320px */ {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+
+    .item {
+    margin-bottom: 1.875em; /* 15px 30px */
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+	    @media only screen and ( max-width: 40em ) /* 640px */{
+	    	margin-bottom: 0.938em; /* 15px */
+	    }
+	    #instructions {
+			font: 16px 'AmericanTypewriter', Cambria, Georgia;
+			color: #282625;
+			margin: 0 auto;
+		}
+		.curly-quotes {
+			line-height: 30px;
+			&:before, &:after {
+				display: inline-block;
+				vertical-align: top;
+				height: 30px;
+				line-height: 48px;
+				font-size: 50px;
+				opacity: .2;
+			}
+			&:before {
+				content: '\201C';
+				font-family: Georgia, serif;
+				margin-right: 4px;
+				margin-left: -8px;
+			}
+			&:after {
+				content: '\201D';
+				font-family: Georgia, serif;
+				margin-left: 4px;
+				margin-right: -8px;
+			}
+		}
+		.author {
+		  display: block;
+		  padding-right: 10px;
+		  text-align: right;
+		  font-size: 13px;
+		  line-height: 29px;
+		  font-style: italic;
+		  color: #84775c;
+		}
+	}
+}
+/* Quote App -- END */
